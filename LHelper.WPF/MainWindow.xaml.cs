@@ -22,12 +22,14 @@ namespace LHelper.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
+        
 
         public MainWindow()
         {
-            InitializeComponent();         
-            this.Content = mainWindowViewModel.mainMenu;
+            InitializeComponent();
+            Page MainMenuPage = new MainMenuPage();
+            this.Content = MainMenuPage;
+            MainMenuPage.DataContext = new MainMenuPageViewModel();
             
             
         }
