@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LHelper.WPF.Views"
+             xmlns:nav ="clr-namespace:LHelper.WPF.Navigators"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -14,7 +15,9 @@
         </Grid.RowDefinitions>
         <!--<TextBlock Grid.Row="0" Text="Evoflix"/>-->
         <Grid Grid.Row="0" RenderOptions.EdgeMode="Aliased" Background="{StaticResource BrushPrimaryKey2}">
-            
+            <Grid.Resources>
+                <Style TargetType="RadioButton" BasedOn="{StaticResource NavButton}"/>
+            </Grid.Resources>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
@@ -27,9 +30,9 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0"  Background="{StaticResource BrushPrimaryKey2}"/>
-            <RadioButton Grid.Column="0" Content="Home" />
-            <RadioButton Grid.Column="1" Content="My List" />
-            <RadioButton Grid.Column="2" Content="Account"/>
+            
+            <RadioButton Grid.Column="1" Content="Menu" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Menu}" />
+            <RadioButton Grid.Column="2" Content="Import Data" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Import}"/>
 
         </Grid>
 

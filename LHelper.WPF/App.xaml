@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:LHelper.WPF"
+             xmlns:viewmodels="clr-namespace:LHelper.WPF.ViewModels"
+             xmlns:views="clr-namespace:LHelper.WPF.Views"
              StartupUri="MainWindow.xaml">
    
     <Application.Resources>
@@ -10,7 +12,16 @@
             <ResourceDictionary Source="/Styles/Common.xaml"/>
             <ResourceDictionary Source="/Styles/NavigationBarStyle.xaml"/>
         </ResourceDictionary.MergedDictionaries>
-        
-    </ResourceDictionary>
+
+        <DataTemplate DataType="{x:Type viewmodels:MenuUCViewModel}">
+             <views:MenuUC/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:ImportUCViewModel}">
+             <views:ImportUC/>
+        </DataTemplate>
+
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

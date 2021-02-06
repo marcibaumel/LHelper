@@ -1,6 +1,4 @@
-﻿using LHelper.WPF.ViewModels;
-using LHelper.WPF.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LHelper.WPF
+namespace LHelper.WPF.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ImportUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ImportUC : UserControl
     {
-        MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
-
-        public MainWindow()
+        public ImportUC()
         {
-            InitializeComponent();         
-            this.Content = mainWindowViewModel.mainMenu;
-            
-            
+            InitializeComponent();
         }
     }
 }
