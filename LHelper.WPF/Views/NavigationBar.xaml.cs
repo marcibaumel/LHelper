@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LHelper.WPF.Views.Pages
+namespace LHelper.WPF.Views
 {
     /// <summary>
-    /// Interaction logic for MainMenuPage.xaml
+    /// Interaction logic for NavigationBar.xaml
     /// </summary>
-    public partial class MainMenuView : Page
+    public partial class NavigationBar : UserControl
     {
-        public MainMenuView()
+        public NavigationBar()
         {
             InitializeComponent();
         }

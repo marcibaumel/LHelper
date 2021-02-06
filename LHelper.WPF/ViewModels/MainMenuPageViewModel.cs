@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LHelper.WPF.ViewModels
 {
-    public class MainMenuViewModel
+    public class MainMenuPageViewModel
     {
+
     }
 }

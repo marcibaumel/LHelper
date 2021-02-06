@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHelper.Models", "LHelper.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHelper.Services", "LHelper.Services\LHelper.Services.csproj", "{34B28E39-9C16-412D-B73A-EF001497C1D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHelper.WPF", "LHelper.WPF\LHelper.WPF.csproj", "{CA3EF4DA-1C52-48DF-ABB0-411043ACC1F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHelper.WPF", "LHelper.WPF\LHelper.WPF.csproj", "{7926A4C6-CFB7-4883-818D-3DF12AF913CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{34B28E39-9C16-412D-B73A-EF001497C1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34B28E39-9C16-412D-B73A-EF001497C1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34B28E39-9C16-412D-B73A-EF001497C1D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA3EF4DA-1C52-48DF-ABB0-411043ACC1F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA3EF4DA-1C52-48DF-ABB0-411043ACC1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA3EF4DA-1C52-48DF-ABB0-411043ACC1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA3EF4DA-1C52-48DF-ABB0-411043ACC1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7926A4C6-CFB7-4883-818D-3DF12AF913CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7926A4C6-CFB7-4883-818D-3DF12AF913CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7926A4C6-CFB7-4883-818D-3DF12AF913CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7926A4C6-CFB7-4883-818D-3DF12AF913CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

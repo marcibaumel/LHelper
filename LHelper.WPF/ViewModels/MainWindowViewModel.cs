@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LHelper.WPF.Models
+namespace LHelper.WPF.ViewModels
 {
-    public class Player
+    public class MainWindowViewModel
     {
-        public int Health = 3;
+        public MainMenuPageViewModel mainMenu { get; set; }
     }
 }
