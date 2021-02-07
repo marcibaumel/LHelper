@@ -13,7 +13,7 @@ namespace LHelper.WPF.Navigators
     public class Navigator : ObservableObject, INavigator
     {
 
-        private ViewModelBase _currentViewModel;
+        private ViewModelBase _currentViewModel=new MenuUCViewModel();
         public ViewModelBase CurrentViewModel
         {
             get
