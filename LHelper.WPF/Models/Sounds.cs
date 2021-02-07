@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
-namespace LHelper.WPF.ViewModels
+namespace LHelper.WPF.Models
 {
-    public class ViewModelBase
+    public class Sounds
     {
-        
     }
 }

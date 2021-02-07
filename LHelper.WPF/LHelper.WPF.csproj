@@ -58,6 +58,8 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\UpdateCurrentViewModelCommands.cs" />
     <Compile Include="Models\ObservableObject.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Sounds.cs" />
     <Compile Include="Navigators\INavigator.cs" />
     <Compile Include="Navigators\Navigator.cs" />
     <Compile Include="ViewModels\ExportUCViewModel.cs" />
@@ -98,6 +100,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\NavigationBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\RoundButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
