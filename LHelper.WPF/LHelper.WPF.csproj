@@ -157,5 +157,27 @@
   <ItemGroup>
     <Folder Include="Resources\Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper">
+      <Version>22.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LHelper.DataAccess\LHelper.DataAccess.csproj">
+      <Project>{77f3d589-18fa-4005-a1f9-58955c25f625}</Project>
+      <Name>LHelper.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LHelper.Models\LHelper.Models.csproj">
+      <Project>{3c8b35ad-785b-4fa5-ae68-c34794fdcf9a}</Project>
+      <Name>LHelper.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LHelper.Services\LHelper.Services.csproj">
+      <Project>{34b28e39-9c16-412d-b73a-ef001497c1d9}</Project>
+      <Name>LHelper.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
