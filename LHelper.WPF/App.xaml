@@ -21,6 +21,10 @@
              <views:ImportUC/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewmodels:ExportUCViewModel}">
+             <views:ExportUC/>
+        </DataTemplate>
+
 
         </ResourceDictionary>
     </Application.Resources>

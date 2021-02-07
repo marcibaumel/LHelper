@@ -22,17 +22,18 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*"/>
+                
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0"  Background="{StaticResource BrushPrimaryKey2}"/>
             
-            <RadioButton Grid.Column="1" Content="Menu" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Menu}" />
-            <RadioButton Grid.Column="2" Content="Import Data" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Import}"/>
+            <RadioButton Grid.Column="1" Content="Menu" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Menu}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <RadioButton Grid.Column="2" Content="Import Data" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Import}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <RadioButton Grid.Column="3" Content="Export Data" FontWeight="Bold" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Export}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         </Grid>
 

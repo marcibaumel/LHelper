@@ -15,12 +15,12 @@ namespace LHelper.WPF.ViewModels
 
         public INavigator Navigator { get; set; } = new Navigator();
 
-        public Command homeViewCommand;
+        public Command ViewCommand;
 
 
         public MainMenuPageViewModel()
         {
-            homeViewCommand = new Command(ExecuteHomeView, CanExecuteHomeView);
+            ViewCommand = new Command(ExecuteHomeView, CanExecuteHomeView);
         }
 
 

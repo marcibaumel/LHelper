@@ -60,11 +60,15 @@
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Navigators\INavigator.cs" />
     <Compile Include="Navigators\Navigator.cs" />
+    <Compile Include="ViewModels\ExportUCViewModel.cs" />
     <Compile Include="ViewModels\ImportUCViewModel.cs" />
     <Compile Include="ViewModels\MainMenuPageViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MenuUCViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\ExportUC.xaml.cs">
+      <DependentUpon>ExportUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ImportUC.xaml.cs">
       <DependentUpon>ImportUC.xaml</DependentUpon>
     </Compile>
@@ -94,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\NavigationBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExportUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

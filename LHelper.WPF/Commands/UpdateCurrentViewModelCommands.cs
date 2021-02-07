@@ -51,7 +51,10 @@ namespace LHelper.WPF.Commands
                     case ViewType.Import:
                         _navigator.CurrentViewModel = new ImportUCViewModel();
                         break;
-                    
+                    case ViewType.Export:
+                        _navigator.CurrentViewModel = new ExportUCViewModel();
+                        break;
+
                 }
             }
         }

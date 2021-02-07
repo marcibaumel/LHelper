@@ -16,6 +16,8 @@
         </Grid.RowDefinitions>
         
         <local:NavigationBar Grid.Row="0" DataContext="{Binding Navigator}"/>
+        <ContentControl Grid.Row="1" Content="Language Helper" FontWeight="Bold" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF2B9CCC"/>
+        <ContentControl Grid.Row="1" Content="Baumel Márton" FontWeight="Bold" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#FF2B9CCC"/>
         <ContentControl Grid.Row="1" Content="{Binding Navigator.CurrentViewModel}"/>
     </Grid>
 </Page>

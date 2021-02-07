@@ -11,7 +11,8 @@ namespace LHelper.WPF.Navigators
     public enum ViewType
     {
         Menu,
-        Import
+        Import,
+        Export
     }
 
     /*
