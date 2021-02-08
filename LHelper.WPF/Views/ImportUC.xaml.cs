@@ -50,19 +50,33 @@ namespace LHelper.WPF.Views
 
                 if (importUCViewModel.system_Settings.Language == "English")
                 {
-                    var reader = new StreamReader(filePath);
-
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    string[] csvLines = System.IO.File.ReadAllLines(@filePath);
+                    
+                    
+                    string word;
+                    string translate;
+                    string help_sentence;
+                    
+                    for (int i=0; i< csvLines.Length; i++)
                     {
-                        var records = csv.GetRecords<EnglishWordsModel>();
+                        string[] rowData = csvLines[i].Split(',');
+                        word = rowData[0];
+                        translate = rowData[1];
+                        help_sentence = rowData[2];
 
-                        records = new List<EnglishWordsModel>();
-                        
-                        foreach (EnglishWordsModel i in records)
+                        List<EnglishWordsModel> englishWordsModelsList = new List<EnglishWordsModel>
                         {
-                            Console.Write("{0}\t", i.ToString());
+                            new EnglishWordsModel {Word=word, Id=i, HelpSentence=help_sentence,Translate=translate}
+                        };
+                        
+                        //Teszt loop
+                        for (int g = 0; g < englishWordsModelsList.Count; g++)
+                        {
+                            // Part 3: access element with index.
+                            Console.WriteLine($"{i} = {englishWordsModelsList[g].Word}");
                         }
-                        Console.WriteLine();
+
+
                     }
 
                 }
