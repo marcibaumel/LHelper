@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using LHelper.Models;
 using LHelper.WPF.ViewModels;
 using Microsoft.Win32;
 using System;
@@ -40,17 +41,35 @@ namespace LHelper.WPF.Views
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
             openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
-            openFileDialog.RestoreDirectory = true;
+            
+            
+            //openFileDialog.RestoreDirectory = true;
             if (openFileDialog.ShowDialog() == true)
             {
-                //Get the path of specified file
                 filePath = openFileDialog.FileName;
-                //using (var csv = new CsvReader(filePath, CultureInfo.InvariantCulture))
-                //{
-                //    var records = csv.GetRecords<Foo>();
-                //}
 
+                if (importUCViewModel.system_Settings.Language == "English")
+                {
+                    var reader = new StreamReader(filePath);
+
+                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    {
+                        var records = csv.GetRecords<EnglishWordsModel>();
+
+                        records = new List<EnglishWordsModel>();
+                        
+                        foreach (EnglishWordsModel i in records)
+                        {
+                            Console.Write("{0}\t", i.ToString());
+                        }
+                        Console.WriteLine();
+                    }
+
+                }
+              
             }
+            
+           
         }
 
         private void JSON_Click(object sender, RoutedEventArgs e)

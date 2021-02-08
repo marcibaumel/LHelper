@@ -59,7 +59,7 @@
     <Compile Include="Commands\UpdateCurrentViewModelCommands.cs" />
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Models\Player.cs" />
-    <Compile Include="Models\Sounds.cs" />
+    <Compile Include="Models\System_Settings.cs" />
     <Compile Include="Navigators\INavigator.cs" />
     <Compile Include="Navigators\Navigator.cs" />
     <Compile Include="ViewModels\ExportUCViewModel.cs" />
@@ -70,6 +70,9 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\ExportUC.xaml.cs">
       <DependentUpon>ExportUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ImportUC.xaml.cs">
       <DependentUpon>ImportUC.xaml</DependentUpon>
@@ -108,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ExportUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
