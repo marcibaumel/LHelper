@@ -3,6 +3,7 @@ using LHelper.Models;
 using LHelper.Services;
 using LHelper.WPF.ViewModels;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -91,7 +92,7 @@ namespace LHelper.WPF.Views
 
         private void JSON_Click(object sender, RoutedEventArgs e)
         {
-            var filePath = string.Empty;
+            //var filePath = string.Empty;
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
@@ -101,12 +102,21 @@ namespace LHelper.WPF.Views
             //openFileDialog.RestoreDirectory = true;
             if (openFileDialog.ShowDialog() == true)
             {
-                filePath = openFileDialog.FileName;
+                string filePath = openFileDialog.FileName;
+                //JObject Path= JObject.Parse(File.ReadAllText(@openFileDialog.FileName));
 
                 if (importUCViewModel.system_Settings.Language == "English")
                 {
-                    
+                    //using (StreamReader r = new StreamReader(filePath))
+                    //{
+                    //    string json = r.ReadToEnd();
+                    //    List<EnglishWordsModel> englishWords = JsonConvert.DeserializeObject<List<EnglishWordsModel>>(filePath);
+
+                    //}
+                    //englishWordsServices.AddANewEnglisWord(englishWords);
                    
+
+
                 }
 
             }
