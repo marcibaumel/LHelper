@@ -91,7 +91,25 @@ namespace LHelper.WPF.Views
 
         private void JSON_Click(object sender, RoutedEventArgs e)
         {
+            var filePath = string.Empty;
 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "c:\\";
+            openFileDialog.Filter = "JSON Files (*.json)|*.json";
+
+
+            //openFileDialog.RestoreDirectory = true;
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filePath = openFileDialog.FileName;
+
+                if (importUCViewModel.system_Settings.Language == "English")
+                {
+                    
+                   
+                }
+
+            }
         }
 
         private void Single_World_Click(object sender, RoutedEventArgs e)
