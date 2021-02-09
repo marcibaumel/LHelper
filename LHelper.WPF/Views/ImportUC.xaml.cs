@@ -1,5 +1,6 @@
 ﻿using CsvHelper;
 using LHelper.Models;
+using LHelper.Services;
 using LHelper.WPF.ViewModels;
 using Microsoft.Win32;
 using System;
@@ -27,7 +28,8 @@ namespace LHelper.WPF.Views
     public partial class ImportUC : UserControl
     {
         private ImportUCViewModel importUCViewModel = new ImportUCViewModel();
-        
+        private EnglishWordsServices englishWordsServices = new EnglishWordsServices();
+
 
         public ImportUC()
         {
@@ -66,14 +68,15 @@ namespace LHelper.WPF.Views
 
                         List<EnglishWordsModel> englishWordsModelsList = new List<EnglishWordsModel>
                         {
-                            new EnglishWordsModel {Word=word, Id=i, HelpSentence=help_sentence,Translate=translate}
+                            new EnglishWordsModel {Word=word, HelpSentence=help_sentence, Translate=translate}
                         };
                         
-                        //Teszt loop
+                        //Read EnglishWords elements 
                         for (int g = 0; g < englishWordsModelsList.Count; g++)
                         {
-                            // Part 3: access element with index.
-                            Console.WriteLine($"{i} = {englishWordsModelsList[g].Word}");
+                                                                                  
+                            englishWordsServices.AddANewEnglisWord(englishWordsModelsList[g]);
+                            
                         }
 
 

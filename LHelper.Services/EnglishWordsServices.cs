@@ -19,8 +19,26 @@ namespace LHelper.Services
 
         public void AddANewEnglisWord(EnglishWordsModel englishWordsModel)
         {
-            unitOfWork.englishWordsModels.Add(englishWordsModel);
-            unitOfWork.SaveChanges();
+            if(CheckWord(englishWordsModel.Translate, englishWordsModel.Word)== true)
+            {
+                unitOfWork.englishWordsModels.Add(englishWordsModel);
+                unitOfWork.SaveChanges();
+            }          
+        }
+
+        public bool CheckWord(string Translate, string Word)
+        {
+            foreach(EnglishWordsModel englishWordsModel in unitOfWork.englishWordsModels)
+            {
+                if(englishWordsModel.Translate == Translate || englishWordsModel.Word == Word || englishWordsModel.Word == null && englishWordsModel.Translate== null)
+                {
+                    Console.WriteLine(englishWordsModel.Word);
+                    return false;
+                    
+                }
+               
+            }
+            return true;
         }
 
 
