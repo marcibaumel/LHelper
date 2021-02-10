@@ -137,7 +137,29 @@ namespace LHelper.WPF.Views
 
         private void Single_World_Click(object sender, RoutedEventArgs e)
         {
+            word_tb.Text = "";
+            translate_tb.Text = "";
+            hel_tb.Text = "";
 
+            one_word_panel.Visibility = Visibility.Visible;
+        }
+
+        private void visibility_back_one_word_panel(object sender, RoutedEventArgs e)
+        {
+            one_word_panel.Visibility = Visibility.Hidden;
+        }
+
+        private void save_back_one_word_panel(object sender, RoutedEventArgs e)
+        {
+            string word = word_tb.Text;
+            string translate = translate_tb.Text;
+            string help_sentence = hel_tb.Text;
+
+            EnglishWordsModel NewEnglishwWord = new EnglishWordsModel { Word = word, Translate = translate, HelpSentence = help_sentence };
+
+            englishWordsServices.AddANewEnglisWord(NewEnglishwWord);
+            
+            one_word_panel.Visibility = Visibility.Hidden;
         }
     }
 }

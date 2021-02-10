@@ -8,6 +8,10 @@
              Background="AliceBlue"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+
+
+
+
         <StackPanel x:Name="Menu_Panel">
             <Grid>
                 <Grid.RowDefinitions>
@@ -23,8 +27,44 @@
                 <Button Style="{DynamicResource RoundCorner}" Click="CSV_Click" Grid.Column="0" Grid.Row="1" Content="CSV" Width="200" Height="75" RenderTransformOrigin="0.5,0.5" />
                 <Button Style="{DynamicResource RoundCorner}" Click="JSON_Click" Grid.Column="1" Grid.Row="1" Content="JSON" Width="200" Height="75" RenderTransformOrigin="0.5,0.5"  />
                 <Button Style="{DynamicResource RoundCorner}" Click="Single_World_Click" Grid.Column="2" Grid.Row="1" Content="Single Word" Width="200" Height="75" RenderTransformOrigin="0.5,0.5"/>
-            
-            
+
+
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:Name="one_word_panel" Visibility="Hidden">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="1" Grid.Column="1" Height="500" >
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Background="Aqua">
+
+
+
+                        <Button Content="X" Height="30" Margin="520,0,0,0" Style="{DynamicResource RoundCorner}" Click="visibility_back_one_word_panel"/>
+                        <Button Content="SAVE" Height="33" Style="{DynamicResource RoundCorner}" Click="save_back_one_word_panel" Margin="456,20,0,0" />
+                        <Label Content="Word:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Height="30" Width="70"/>
+                        <TextBox x:Name="word_tb" Height="27" TextWrapping="Wrap" Text="TextBox" Margin="0,0,261,0"/>
+
+                        <Label Content="Translate:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+                        <TextBox x:Name="translate_tb" Height="28" TextWrapping="Wrap" Text="TextBox" Margin="0,0,261,0"/>
+
+                        <Label  Content="Help Sentence (optional):" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="10"/>
+                        <TextBox x:Name="hel_tb" Height="31" TextWrapping="Wrap" Text="TextBox" Margin="0,0,10,0"/>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </StackPanel>
 
