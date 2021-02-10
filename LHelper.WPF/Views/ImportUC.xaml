@@ -42,7 +42,7 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
-                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="300"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
 
@@ -54,7 +54,6 @@
 
 
                         <Button Content="X" Height="30" Margin="520,0,0,0" Style="{DynamicResource RoundCorner}" Click="visibility_back_one_word_panel"/>
-                        <Button Content="SAVE" Height="33" Style="{DynamicResource RoundCorner}" Click="save_back_one_word_panel" Margin="456,20,0,0" />
                         <Label Content="Word:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Height="30" Width="70"/>
                         <TextBox x:Name="word_tb" Height="27" TextWrapping="Wrap" Text="TextBox" Margin="0,0,261,0"/>
 
@@ -63,6 +62,7 @@
 
                         <Label  Content="Help Sentence (optional):" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="10"/>
                         <TextBox x:Name="hel_tb" Height="31" TextWrapping="Wrap" Text="TextBox" Margin="0,0,10,0"/>
+                        <Button Content="SAVE" Height="33" Style="{DynamicResource RoundCorner}" Click="save_back_one_word_panel" Margin="456,20,0,0" />
                     </StackPanel>
                 </Grid>
             </Grid>

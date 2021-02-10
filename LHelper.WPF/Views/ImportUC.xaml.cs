@@ -155,11 +155,20 @@ namespace LHelper.WPF.Views
             string translate = translate_tb.Text;
             string help_sentence = hel_tb.Text;
 
-            EnglishWordsModel NewEnglishwWord = new EnglishWordsModel { Word = word, Translate = translate, HelpSentence = help_sentence };
+            if (word == "" && translate == "")
+            {
+                MessageBox.Show("No new word");
+                one_word_panel.Visibility = Visibility.Hidden;
+            }
+            else
+            {
 
-            englishWordsServices.AddANewEnglisWord(NewEnglishwWord);
-            
-            one_word_panel.Visibility = Visibility.Hidden;
+                EnglishWordsModel NewEnglishwWord = new EnglishWordsModel { Word = word, Translate = translate, HelpSentence = help_sentence };
+
+                englishWordsServices.AddANewEnglisWord(NewEnglishwWord);
+
+                one_word_panel.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
