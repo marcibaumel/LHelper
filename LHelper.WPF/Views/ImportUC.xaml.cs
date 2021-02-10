@@ -103,18 +103,31 @@ namespace LHelper.WPF.Views
             if (openFileDialog.ShowDialog() == true)
             {
                 string filePath = openFileDialog.FileName;
-                //JObject Path= JObject.Parse(File.ReadAllText(@openFileDialog.FileName));
+              
+                
 
                 if (importUCViewModel.system_Settings.Language == "English")
                 {
-                    //using (StreamReader r = new StreamReader(filePath))
-                    //{
-                    //    string json = r.ReadToEnd();
-                    //    List<EnglishWordsModel> englishWords = JsonConvert.DeserializeObject<List<EnglishWordsModel>>(filePath);
 
-                    //}
-                    //englishWordsServices.AddANewEnglisWord(englishWords);
-                   
+                    StreamReader r = new StreamReader(filePath);
+                    string json = r.ReadToEnd();
+                    List<EnglishWordsModel> data = JsonConvert.DeserializeObject<List<EnglishWordsModel>>(json);
+                    Console.WriteLine(data.Count);
+
+                    for(int i=0; i<data.Count; i++)
+                    {
+                        //Console.WriteLine(data[i].Word);
+                        string word=data[i].Word;
+                        string translate=data[i].Translate;
+                        string help_sentence=data[i].HelpSentence;
+
+                        EnglishWordsModel NewEnglishwWord = new EnglishWordsModel { Word = word, Translate = translate, HelpSentence = help_sentence };
+                        
+
+                        englishWordsServices.AddANewEnglisWord(NewEnglishwWord);
+                    }
+                    
+
 
 
                 }

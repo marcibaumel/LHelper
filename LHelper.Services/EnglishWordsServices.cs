@@ -30,7 +30,7 @@ namespace LHelper.Services
         {
             foreach(EnglishWordsModel englishWordsModel in unitOfWork.englishWordsModels)
             {
-                if(englishWordsModel.Translate == Translate || englishWordsModel.Word == Word || englishWordsModel.Word == null && englishWordsModel.Translate== null)
+                if(englishWordsModel.Translate == Translate || englishWordsModel.Word == Word)
                 {
                     Console.WriteLine(englishWordsModel.Word);
                     return false;
